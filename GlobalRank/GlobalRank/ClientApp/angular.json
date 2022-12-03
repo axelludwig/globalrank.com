@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "GlobalRank"
+  "defaultProject": "GlobalRank",
+  "cli": {
+    "analytics": false
+  }
 }
