@@ -1,9 +1,16 @@
 ﻿{
-  {
-    "game":"league of legends",
-    "ranks":
-    {
-
+  "league of legends": {
+    "ranks": {
+      "bronze": 80,
+      "silver": 40,
+      "gold": 15
+    }
+  },
+  "csgo": {
+    "ranks": {
+      "bronze": 75,
+      "silver": 35,
+      "global": 10
     }
   }
 }

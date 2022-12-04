@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalRank.Core\GlobalRank.Core.csproj" />
+  </ItemGroup>
+
 </Project>
