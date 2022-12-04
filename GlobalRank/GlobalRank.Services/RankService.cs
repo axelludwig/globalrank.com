@@ -13,7 +13,7 @@ namespace GlobalRank.Services
             Repository = serviceProvider.GetService(typeof(IRankRepository)) as IRankRepository;
         }
 
-        public Dictionary<string, GameData> GetData()
+        public ICollection<GameData> GetData()
         {
             return Repository.GetData();
         }

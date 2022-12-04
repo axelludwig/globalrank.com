@@ -4,6 +4,6 @@ namespace GlobalRank.Core.Interfaces.Repositories
 {
     public interface IRankRepository
     {
-        Dictionary<string, GameData> GetData();
+        ICollection<GameData> GetData();
     }
 }

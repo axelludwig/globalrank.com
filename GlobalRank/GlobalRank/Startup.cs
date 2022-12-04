@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+﻿using GlobalRank.Helpers;
 
 namespace GlobalRank
 {
@@ -11,6 +10,11 @@ namespace GlobalRank
         }
 
         public IConfiguration Configuration { get; }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.InitializeContainer();
+        }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)
         {

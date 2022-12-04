@@ -4,6 +4,6 @@ namespace GlobalRank.Core.Interfaces.Services
 {
     public interface IRankService
     {
-        Dictionary<string, GameData> GetData();
+        ICollection<GameData> GetData();
     }
 }

@@ -12,13 +12,13 @@ namespace GlobalRank.Infrastructure.Repositories
         public RankRepository()
         {
             _jsonPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data\data.json");
-            
+
         }
 
-        public Dictionary<string, GameData> GetData()
+        public ICollection<GameData> GetData()
         {
             string json = File.ReadAllText(_jsonPath);
-            Dictionary<string, GameData> data = JsonSerializer.Deserialize<Dictionary<string, GameData>>(json);
+            ICollection<GameData> data = JsonSerializer.Deserialize<ICollection<GameData>>(json);
 
             return data;
         }

@@ -2,6 +2,7 @@
 {
     public class GameData
     {
-        public Dictionary<string, int> Ranks;
+        public string Name { get; set; }
+        public Dictionary<string, int> Ranks { get; set; }
     }
 }

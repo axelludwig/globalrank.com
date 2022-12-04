@@ -1,16 +1,18 @@
-﻿{
-  "league of legends": {
-    "ranks": {
+﻿[
+  {
+    "Name": "league of legends",
+    "Ranks": {
       "bronze": 80,
       "silver": 40,
       "gold": 15
     }
   },
-  "csgo": {
-    "ranks": {
+  {
+    "Name": "csgo",
+    "Ranks": {
       "bronze": 75,
       "silver": 35,
       "global": 10
     }
   }
-}
+]
