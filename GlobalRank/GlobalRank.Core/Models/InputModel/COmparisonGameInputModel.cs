@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GlobalRank.Core.Models.DisplayModels
+namespace GlobalRank.Core.Models.InputModel
 {
-    public class RankGameComparison
+    public class ComparisonGameInputModel
     {
         public string Name { get; set; }
-        public string Rank { get; set; }
-        public float Percentage { get; set; }
         public string Queue { get; set; }
     }
 }
