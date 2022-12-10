@@ -72,8 +72,7 @@
               "browserTarget": "GlobalRank:build:production"
             },
             "development": {
-              "browserTarget": "GlobalRank:build:development",
-              "proxyConfig": "proxy.conf.js"
+              "browserTarget": "GlobalRank:build:development"
             }
           },
           "defaultConfiguration": "development"
