@@ -1,18 +1,80 @@
 ﻿[
   {
     "Name": "league of legends",
-    "Ranks": {
-      "bronze": 80,
-      "silver": 40,
-      "gold": 15
-    }
+    "Leagues": [
+      {
+        "Name": "SoloQ",
+        "Ranks": [
+          {
+            "Name": "Bronze",
+            "Percentage": 80
+          },
+          {
+            "Name": "Silver",
+            "Percentage": 40
+          },
+          {
+            "Name": "Gold",
+            "Percentage": 10
+          }
+        ]
+      },
+      {
+        "Name": "Flex",
+        "Ranks": [
+          {
+            "Name": "Bronze",
+            "Percentage": 70
+          },
+          {
+            "Name": "Silver",
+            "Percentage": 35
+          },
+          {
+            "Name": "Gold",
+            "Percentage": 5
+          }
+        ]
+      }
+    ]
   },
   {
-    "Name": "csgo",
-    "Ranks": {
-      "bronze": 75,
-      "silver": 35,
-      "global": 10
-    }
+    "Name": "CSGO",
+    "Leagues": [
+      {
+        "Name": "Competitive",
+        "Ranks": [
+          {
+            "Name": "Bronze",
+            "Percentage": 60
+          },
+          {
+            "Name": "Silver",
+            "Percentage": 30
+          },
+          {
+            "Name": "Gold",
+            "Percentage": 15
+          }
+        ]
+      },
+      {
+        "Name": "Wingman",
+        "Ranks": [
+          {
+            "Name": "Bronze",
+            "Percentage": 95
+          },
+          {
+            "Name": "Silver",
+            "Percentage": 50
+          },
+          {
+            "Name": "Gold",
+            "Percentage": 12
+          }
+        ]
+      }
+    ]
   }
 ]
