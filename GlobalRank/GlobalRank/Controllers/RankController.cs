@@ -1,5 +1,5 @@
 ﻿using GlobalRank.Core.Interfaces.Services;
-using GlobalRank.Core.Models;
+using GlobalRank.Core.Models.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GlobalRank.Controllers

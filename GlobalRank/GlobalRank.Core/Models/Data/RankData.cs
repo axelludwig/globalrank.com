@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GlobalRank.Core.Models
+namespace GlobalRank.Core.Models.Data
 {
-    public class LeagueData
+    public class RankData
     {
         public string Name { get; set; }
-        public ICollection<RankData> Ranks { get; set; }
+        public float Percentage { get; set; }
     }
 }

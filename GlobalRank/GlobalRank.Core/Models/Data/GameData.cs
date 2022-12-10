@@ -1,4 +1,4 @@
-﻿namespace GlobalRank.Core.Models
+﻿namespace GlobalRank.Core.Models.Data
 {
     public class GameData
     {

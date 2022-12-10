@@ -1,4 +1,4 @@
-﻿using GlobalRank.Core.Models;
+﻿using GlobalRank.Core.Models.Data;
 
 namespace GlobalRank.Core.Interfaces.Repositories
 {

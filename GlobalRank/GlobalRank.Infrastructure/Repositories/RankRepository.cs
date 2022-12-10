@@ -1,5 +1,5 @@
 ﻿using GlobalRank.Core.Interfaces.Repositories;
-using GlobalRank.Core.Models;
+using GlobalRank.Core.Models.Data;
 using System.Reflection;
 using System.Text.Json;
 

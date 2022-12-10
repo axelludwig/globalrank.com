@@ -1,6 +1,6 @@
 ﻿using GlobalRank.Core.Interfaces.Repositories;
 using GlobalRank.Core.Interfaces.Services;
-using GlobalRank.Core.Models;
+using GlobalRank.Core.Models.Data;
 
 namespace GlobalRank.Services
 {
