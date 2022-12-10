@@ -3,6 +3,7 @@
     public class GameData
     {
         public string Name { get; set; }
-        public ICollection<LeagueData> Leagues { get; set; }
+        public string Id { get; set; }
+        public ICollection<QueueData> Queues { get; set; }
     }
 }

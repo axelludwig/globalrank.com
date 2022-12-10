@@ -1,7 +1,8 @@
 ﻿[
   {
     "Name": "league of legends",
-    "Leagues": [
+    "Id": "lol",
+    "Queues": [
       {
         "Name": "SoloQ",
         "Ranks": [
@@ -16,6 +17,10 @@
           {
             "Name": "Gold",
             "Percentage": 10
+          },
+          {
+            "Name": "Diamond",
+            "Percentage": 2
           }
         ]
       },
@@ -40,7 +45,8 @@
   },
   {
     "Name": "CSGO",
-    "Leagues": [
+    "Id": "csgo",
+    "Queues": [
       {
         "Name": "Competitive",
         "Ranks": [
@@ -55,6 +61,10 @@
           {
             "Name": "Gold",
             "Percentage": 15
+          },
+          {
+            "Name": "Double AK",
+            "Percentage": 3
           }
         ]
       },

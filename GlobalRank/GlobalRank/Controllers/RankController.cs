@@ -28,33 +28,7 @@ namespace GlobalRank.Controllers
         [HttpGet("compare")]
         public ActionResult<ICollection<RankComparison>> Compare([FromBody] ComparisonInputModel comparisonInputModel)
         {
-            var ret = new RankComparison()
-            {
-                MyGame = new RankGameComparison()
-                {
-                    Name = "League of Legends",
-                    Percentage = 10,
-                    Rank = "Gold",
-                    Queue = "SoloQ"
-                },
-                OtherGames = new List<RankGameComparison>()
-                {
-                    new RankGameComparison()
-                    {
-                        Name = "CSGO",
-                        Rank = "Double AK 47",
-                        Percentage = 11,
-                         Queue = "Competitive"
-                    },
-                    new RankGameComparison()
-                    {
-                        Name = "Rocket League",
-                        Rank = "gold",
-                        Percentage = 12,
-                        Queue = "Duo"
-                    }
-                }
-            };
+            RankComparison ret = Service.CompareRanks(comparisonInputModel);
 
             return Ok(ret);
         }

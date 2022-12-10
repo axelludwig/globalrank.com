@@ -5,11 +5,16 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalRank", "GlobalRank\GlobalRank.csproj", "{FC857D8E-BCC6-4219-BCA0-194965FA1452}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalRank.Services", "GlobalRank.Services\GlobalRank.Services.csproj", "{035A8038-02F9-4BD7-B779-B39E1B3F7454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalRank.Services", "GlobalRank.Services\GlobalRank.Services.csproj", "{035A8038-02F9-4BD7-B779-B39E1B3F7454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalRank.Infrastructure", "GlobalRank.Infrastructure\GlobalRank.Infrastructure.csproj", "{3AE24F9E-231A-4ADD-8C6A-EBFFDBCF6222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalRank.Infrastructure", "GlobalRank.Infrastructure\GlobalRank.Infrastructure.csproj", "{3AE24F9E-231A-4ADD-8C6A-EBFFDBCF6222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalRank.Core", "GlobalRank.Core\GlobalRank.Core.csproj", "{65097E74-CD31-490E-8AE1-3FD15708628F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GlobalRank.Core", "GlobalRank.Core\GlobalRank.Core.csproj", "{65097E74-CD31-490E-8AE1-3FD15708628F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8DE6C017-217D-40D4-A1F2-916C4C14398E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

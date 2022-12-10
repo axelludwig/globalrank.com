@@ -1,8 +1,8 @@
 ﻿namespace GlobalRank.Core.Models.Data
 {
-    public class RankData
+    public class QueueData
     {
         public string Name { get; set; }
-        public float Percentage { get; set; }
+        public ICollection<RankData> Ranks { get; set; }
     }
 }
