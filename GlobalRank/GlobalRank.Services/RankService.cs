@@ -1,4 +1,5 @@
-﻿using GlobalRank.Core.Interfaces.Repositories;
+﻿using GlobalRank.Core.Exceptions;
+using GlobalRank.Core.Interfaces.Repositories;
 using GlobalRank.Core.Interfaces.Services;
 using GlobalRank.Core.Models.Data;
 using GlobalRank.Core.Models.DisplayModels;
@@ -74,7 +75,7 @@ namespace GlobalRank.Services
             GameData res = gamesData.FirstOrDefault(x => x.Id == gameId);
             if (res == null)
             {
-                throw new ArgumentException($"Game id {gameId} not existing");
+                throw new DataNotFoundException($"Game id {gameId} not existing");
             }
 
             return res;
@@ -85,7 +86,7 @@ namespace GlobalRank.Services
             QueueData res = gameData.Queues.FirstOrDefault(x => x.Name == queueName);
             if (res == null)
             {
-                throw new ArgumentException($"Queue {queueName} not existing");
+                throw new DataNotFoundException($"Queue {queueName} not existing");
             }
 
             return res;
@@ -96,7 +97,7 @@ namespace GlobalRank.Services
             RankData res = queueData.Ranks.FirstOrDefault(x => x.Name == rankName);
             if (res == null)
             {
-                throw new ArgumentException($"Rank {rankName} not existing");
+                throw new DataNotFoundException($"Rank {rankName} not existing");
             }
 
             return res;
@@ -107,7 +108,7 @@ namespace GlobalRank.Services
             ComparisonGameInputModel res = comparisonInputModel.Queues.FirstOrDefault(x => x.GameId == gameId);
             if (res == null)
             {
-                throw new ArgumentException($"Game {gameId} not existing");
+                throw new DataNotFoundException($"Game {gameId} not existing");
             }
 
             return res;

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GlobalRank.Core.Exceptions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Net;
 
@@ -47,6 +48,11 @@ namespace GlobalRank.Filters
             {
                 message = exceptionMessage;
                 status = HttpStatusCode.BadRequest;
+            }
+            else if (exceptionType == typeof(DataNotFoundException))
+            {
+                message = exceptionMessage;
+                status = HttpStatusCode.NotFound;
             }
             else
             {
