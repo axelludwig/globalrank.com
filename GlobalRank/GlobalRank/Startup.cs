@@ -1,4 +1,5 @@
-﻿using GlobalRank.Helpers;
+﻿using GlobalRank.Filters;
+using GlobalRank.Helpers;
 
 namespace GlobalRank
 {
@@ -14,6 +15,8 @@ namespace GlobalRank
         public void ConfigureServices(IServiceCollection services)
         {
             services.InitializeContainer();
+
+            services.AddControllers(options => options.Filters.Add(typeof(CustomExceptionFilter)));
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env)
@@ -37,7 +40,7 @@ namespace GlobalRank
 
             app.MapFallbackToFile("index.html"); ;
 
-            
+
 
             app.Run();
 

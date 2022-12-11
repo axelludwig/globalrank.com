@@ -26,21 +26,22 @@ namespace GlobalRank.Services
 
             IEnumerable<GameData> games = GetData();
 
-            GameData myGame = games.FirstOrDefault(x => x.Id == comparisonInputModel.MyGameId);
+            GameData myGame = GetGameDataById(comparisonInputModel.MyGameId, games);
 
-            QueueData myQueue = myGame.Queues.FirstOrDefault(x => x.Name == comparisonInputModel.MyQueue);
+            QueueData myQueue = GetQueueDataByName(comparisonInputModel.MyQueue, myGame);
 
-            RankData myRank = myQueue.Ranks.FirstOrDefault(x => x.Name == comparisonInputModel.MyRank);
+            RankData myRank = GetRankDataByName(comparisonInputModel.MyRank, myQueue);
 
             IEnumerable<GameData> otherGames = games.Where(x => x.Id != comparisonInputModel.MyGameId);
 
-            foreach (GameData game in otherGames)
+            foreach (GameData otherGame in otherGames)
             {
-                string queueName = comparisonInputModel.Queues.FirstOrDefault(x => x.GameId == game.Id).Queue;
-                QueueData league = game.Queues.FirstOrDefault(x => x.Name == queueName);
-                RankGameComparison rankGameComparison = GetClosestRank(myRank, league);
-                rankGameComparison.GameName = game.Name;
-                rankGameComparison.GameId = game.Id;
+                ComparisonGameInputModel compareGame = GetComparisonGameById(otherGame.Id, comparisonInputModel);
+
+                QueueData queue = GetQueueDataByName(compareGame.Queue, otherGame);
+                RankGameComparison rankGameComparison = GetClosestRank(myRank, queue);
+                rankGameComparison.GameName = otherGame.Name;
+                rankGameComparison.GameId = otherGame.Id;
 
                 res.OtherGames.Add(rankGameComparison);
             }
@@ -64,6 +65,50 @@ namespace GlobalRank.Services
             res.Rank = compareRankData.Name;
             res.Percentage = compareRankData.Percentage;
             res.Queue = compareGameLeagueData.Name;
+
+            return res;
+        }
+
+        private GameData GetGameDataById(string gameId, IEnumerable<GameData> gamesData)
+        {
+            GameData res = gamesData.FirstOrDefault(x => x.Id == gameId);
+            if (res == null)
+            {
+                throw new ArgumentException($"Game id {gameId} not existing");
+            }
+
+            return res;
+        }
+
+        private QueueData GetQueueDataByName(string queueName, GameData gameData)
+        {
+            QueueData res = gameData.Queues.FirstOrDefault(x => x.Name == queueName);
+            if (res == null)
+            {
+                throw new ArgumentException($"Queue {queueName} not existing");
+            }
+
+            return res;
+        }
+
+        private RankData GetRankDataByName(string rankName, QueueData queueData)
+        {
+            RankData res = queueData.Ranks.FirstOrDefault(x => x.Name == rankName);
+            if (res == null)
+            {
+                throw new ArgumentException($"Rank {rankName} not existing");
+            }
+
+            return res;
+        }
+
+        private ComparisonGameInputModel GetComparisonGameById(string gameId, ComparisonInputModel comparisonInputModel)
+        {
+            ComparisonGameInputModel res = comparisonInputModel.Queues.FirstOrDefault(x => x.GameId == gameId);
+            if (res == null)
+            {
+                throw new ArgumentException($"Game {gameId} not existing");
+            }
 
             return res;
         }
